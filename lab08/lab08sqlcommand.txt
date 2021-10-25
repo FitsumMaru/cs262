@@ -1,0 +1,43 @@
+--Exercise 8.1:
+a) 	SELECT *
+	FROM Game
+	ORDER BY time DESC;
+
+
+b)	SELECT * 
+	FROM Game 
+	WHERE time > CURRENT_DATE - 7;
+
+
+c)	SELECT * 
+	FROM Player
+	WHERE name IS NOT NULL;
+
+
+d)	SELECT playerID
+	FROM PlayerGame
+	WHERE score > 2000;
+
+e)	SELECT *
+	FROM Player
+	WHERE emailAddress IS NOT NULL; 
+
+--Exercise 8.2:
+
+a)	SELECT score
+	FROM Player, PlayerGame
+	WHERE name IS 'The King'
+	ORDER BY score DESC;
+
+
+b)	SELECT Player.name,
+	FROM Player, PlayerGame, Game
+	WHERE time = "2006-06-28 13:20:00"
+	ORDER BY score DESC
+	LIMIT 1;
+	
+c)	It specifies two players with the same name that they have a different ID numbers
+
+d)	A person might want to join a table to itself to specify objects with the same 
+	name/ID that they have other things that are different	
+	
